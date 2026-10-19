@@ -1,0 +1,12 @@
+{%- comment -%} Ehdokkuudet ja ehdokasnumerot. Ehdokas voi olla ehdolla seurakuntaneuvostoon, kirkkovaltuustoon tai molempiin. {%- endcomment -%}
+{%- assign e = include.ehdokas -%}
+{%- if e.seurakuntaneuvosto.ehdolla or e.kirkkovaltuusto.ehdolla %}
+<ul class="ehdokkuudet">
+  {%- if e.seurakuntaneuvosto.ehdolla %}
+  <li><span class="ehdokkuudet__elin">Seurakuntaneuvosto</span>{% if e.seurakuntaneuvosto.numero and e.seurakuntaneuvosto.numero != "" %}<span class="ehdokkuudet__numero">{{ e.seurakuntaneuvosto.numero }}</span>{% else %}<span class="ehdokkuudet__tulossa">numero tulossa</span>{% endif %}</li>
+  {%- endif %}
+  {%- if e.kirkkovaltuusto.ehdolla %}
+  <li><span class="ehdokkuudet__elin">Kirkkovaltuusto</span>{% if e.kirkkovaltuusto.numero and e.kirkkovaltuusto.numero != "" %}<span class="ehdokkuudet__numero">{{ e.kirkkovaltuusto.numero }}</span>{% else %}<span class="ehdokkuudet__tulossa">numero tulossa</span>{% endif %}</li>
+  {%- endif %}
+</ul>
+{%- endif %}

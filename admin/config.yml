@@ -30,7 +30,18 @@ collections:
     summary: "{{jarjestys}}. {{title}}"
     fields:
       - { name: title, label: Nimi, widget: string }
-      - { name: numero, label: Ehdokasnumero, widget: string, required: false, hint: "Täytä, kun numero on vahvistettu." }
+      - name: seurakuntaneuvosto
+        label: Seurakuntaneuvosto
+        widget: object
+        fields:
+          - { name: ehdolla, label: Ehdolla seurakuntaneuvostoon, widget: boolean, default: false }
+          - { name: numero, label: Ehdokasnumero (seurakuntaneuvosto), widget: string, required: false, hint: "Täytä, kun numero on vahvistettu." }
+      - name: kirkkovaltuusto
+        label: Kirkkovaltuusto
+        widget: object
+        fields:
+          - { name: ehdolla, label: Ehdolla kirkkovaltuustoon, widget: boolean, default: false }
+          - { name: numero, label: Ehdokasnumero (kirkkovaltuusto), widget: string, required: false, hint: "Täytä, kun numero on vahvistettu." }
       - { name: titteli, label: Ammatti tai titteli, widget: string, required: false }
       - { name: kuva, label: Kuva, widget: image, required: false, hint: "Mieluiten pystykuva (4:5)." }
       - { name: lyhyesti, label: Lyhyt esittely, widget: text, required: false, hint: "1–2 lausetta. Näkyy etusivun ehdokaskortissa." }

@@ -1,6 +1,11 @@
 ---
 title: Toinen Ehdokas
-numero: ""
+seurakuntaneuvosto:
+  ehdolla: true
+  numero: ""
+kirkkovaltuusto:
+  ehdolla: false
+  numero: ""
 titteli: ammatti tai titteli
 kuva: ""
 lyhyesti: Yksi tai kaksi lausetta siitä, miksi olen ehdolla. Vaihda tämä teksti hallintapaneelissa.

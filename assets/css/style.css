@@ -80,11 +80,10 @@ h3 { font-size: 1.25rem; }
 .ehdokas__kuva { position: relative; aspect-ratio: 4 / 5; border-radius: var(--pyoristys); overflow: hidden; background: var(--keltainen-vaalea); margin-bottom: 0.75rem; }
 .ehdokas__kuva img { width: 100%; height: 100%; object-fit: cover; }
 .ehdokas__kuva .paikkamerkki, .ehdokassivu__kuva .paikkamerkki { object-fit: contain; padding: 18%; }
-.ehdokas__numero {
-  position: absolute; left: 0.75rem; bottom: 0.75rem; min-width: 3.25rem; height: 3.25rem; padding: 0 0.5rem;
-  display: grid; place-items: center; border-radius: 999px; background: var(--magenta); color: var(--valkoinen);
-  font-weight: 700; font-size: 1.375rem; border: 3px solid var(--keltainen);
-}
+.ehdokkuudet { list-style: none; padding: 0; margin: 0 0 0.75rem; display: grid; gap: 0.35rem; }
+.ehdokkuudet li { display: flex; align-items: center; justify-content: space-between; gap: 0.75rem; padding: 0.3rem 0.3rem 0.3rem 0.75rem; border-radius: 999px; background: var(--keltainen-vaalea); font-size: 0.9rem; font-weight: 500; }
+.ehdokkuudet__numero { min-width: 2.4rem; padding: 0.1rem 0.6rem; border-radius: 999px; background: var(--magenta); color: var(--valkoinen); font-weight: 700; font-size: 1.05rem; text-align: center; }
+.ehdokkuudet__tulossa { color: var(--harmaa); font-size: 0.8rem; font-weight: 400; padding-right: 0.5rem; white-space: nowrap; }
 .ehdokas h3 { margin-bottom: 0.15rem; }
 .ehdokas__titteli { color: var(--harmaa); font-weight: 500; margin: 0 0 0.5rem; }
 .ehdokas p { margin-top: 0; }
@@ -92,8 +91,9 @@ h3 { font-size: 1.25rem; }
 .ehdokassivu { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); gap: 3rem; align-items: start; }
 .ehdokassivu__kuva { aspect-ratio: 4 / 5; border-radius: var(--pyoristys); overflow: hidden; background: var(--keltainen-vaalea); }
 .ehdokassivu__kuva img { width: 100%; height: 100%; object-fit: cover; }
-.ehdokassivu__numero { font-size: 1.125rem; margin: 0 0 0.25rem; }
-.ehdokassivu__numero strong { color: var(--magenta); font-size: 1.75rem; }
+.ehdokassivu__numerot { max-width: 24rem; margin: 0.5rem 0 1rem; }
+.ehdokassivu__numerot .ehdokkuudet li { font-size: 1rem; padding-left: 1rem; }
+.ehdokassivu__numerot .ehdokkuudet__numero { font-size: 1.35rem; min-width: 3rem; }
 
 .leipateksti img { border-radius: var(--pyoristys); margin: 1.5rem 0; }
 
@@ -121,7 +121,11 @@ h3 { font-size: 1.25rem; }
   .ehdokkaat { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem 1rem; }
   .ehdokas h3 { font-size: 1.05rem; }
   .ehdokas p { font-size: 0.95rem; }
-  .ehdokas__numero { min-width: 2.5rem; height: 2.5rem; font-size: 1.1rem; }
+  .ehdokkuudet li { font-size: 0.8rem; padding: 0.4rem 0.6rem; flex-direction: column; align-items: flex-start; gap: 0.25rem; border-radius: 0.75rem; }
+  .ehdokkuudet__elin { overflow-wrap: anywhere; }
+  .ehdokassivu__numerot .ehdokkuudet li { flex-direction: row; align-items: center; }
+  .ehdokkuudet__numero { min-width: 2rem; font-size: 0.95rem; padding: 0.05rem 0.45rem; }
+  .ehdokkuudet__tulossa { font-size: 0.75rem; padding-right: 0; }
   .ylapalkki { position: static; }
   .ylapalkki__logo img { width: 96px; }
   .osio { padding: 3rem 0; }

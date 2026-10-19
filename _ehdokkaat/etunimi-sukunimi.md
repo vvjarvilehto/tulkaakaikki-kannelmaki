@@ -1,6 +1,11 @@
 ---
 title: Anni Järvilehto
-numero: "28"
+seurakuntaneuvosto:
+  ehdolla: true
+  numero: ""
+kirkkovaltuusto:
+  ehdolla: true
+  numero: ""
 titteli: ammatti tai titteli
 kuva: /assets/uploads/Anni ehdokkuus.jpeg
 lyhyesti: Yksi tai kaksi lausetta siitä, miksi olen ehdolla. Vaihda tämä teksti

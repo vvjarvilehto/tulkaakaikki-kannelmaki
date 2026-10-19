@@ -7,10 +7,10 @@
       {%- else %}
       <img class="paikkamerkki" src="{{ '/assets/img/kynttila.svg' | relative_url }}" alt="">
       {%- endif %}
-      {%- if e.numero and e.numero != "" %}<span class="ehdokas__numero">{{ e.numero }}</span>{% endif %}
     </div>
     <h3>{{ e.title }}</h3>
   </a>
   {%- if e.titteli %}<p class="ehdokas__titteli">{{ e.titteli }}</p>{% endif %}
+  {%- include ehdokasnumerot.html ehdokas=e %}
   {%- if e.lyhyesti %}<p>{{ e.lyhyesti }}</p>{% endif %}
 </article>

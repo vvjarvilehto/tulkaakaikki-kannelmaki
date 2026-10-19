@@ -1,6 +1,11 @@
 ---
 title: Kolmas Ehdokas
-numero: ""
+seurakuntaneuvosto:
+  ehdolla: false
+  numero: ""
+kirkkovaltuusto:
+  ehdolla: true
+  numero: ""
 titteli: ammatti tai titteli
 kuva: ""
 lyhyesti: Yksi tai kaksi lausetta siitä, miksi olen ehdolla. Vaihda tämä teksti hallintapaneelissa.
