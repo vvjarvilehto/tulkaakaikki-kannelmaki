@@ -3,7 +3,8 @@
 Tulkaa kaikki -ehdokaslistan sivusto Kannelmäen seurakunnan seurakuntavaaleihin.
 
 - Sivusto: Jekyll, julkaistaan GitHub Pagesissa
-- Hallintapaneeli: [Sveltia CMS](https://github.com/sveltia/sveltia-cms), osoitteessa `/admin/`
+- Hallintapaneeli: [Pages CMS](https://app.pagescms.org) (ylläpitäjät sähköpostilla, asetukset `.pages.yml`)
+- Vaihtoehtoinen hallintapaneeli GitHub-käyttäjille: [Sveltia CMS](https://github.com/sveltia/sveltia-cms), osoitteessa `/admin/`
 - Käyttöönotto ja ylläpitäjien lisääminen: [OHJE-KAYTTOONOTTO.md](OHJE-KAYTTOONOTTO.md)
 - Ohje ylläpitäjille: [OHJE-YLLAPITAJILLE.md](OHJE-YLLAPITAJILLE.md)
 

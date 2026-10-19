@@ -1,6 +1,6 @@
 # Käyttöönotto-ohje (pääylläpitäjälle)
 
-Sivusto on Jekyll-sivusto, jonka GitHub Pages rakentaa automaattisesti. Sisältöä muokataan hallintapaneelista (Sveltia CMS) osoitteessa `…/admin/`.
+Sivusto on Jekyll-sivusto, jonka GitHub Pages rakentaa automaattisesti. Sisältöä muokataan Pages CMS -hallintapaneelista (app.pagescms.org). GitHub-käyttäjille on lisäksi Sveltia CMS osoitteessa `…/admin/`.
 
 ## 1. Julkaise sivusto GitHub Pagesissa
 
@@ -11,28 +11,33 @@ Sivusto on Jekyll-sivusto, jonka GitHub Pages rakentaa automaattisesti. Sisält�
 
 Rakennuksen tilan näet repositorion **Actions**-välilehdeltä.
 
-## 2. Kirjaudu hallintapaneeliin
+## 2. Hallintapaneeli: Pages CMS (ylläpitäjät ilman GitHub-tunnusta)
 
-1. Avaa `https://vvjarvilehto.github.io/tulkaakaikki-kannelmaki/admin/`
-2. Valitse **Kirjaudu sisään access tokenilla**.
-3. Tee tunniste GitHubissa: **Settings → Developer settings → Personal access tokens → Tokens (classic) → Generate new token (classic)**.
-   - *Note*: `Tulkaa kaikki -sivusto`
-   - *Expiration*: esim. 90 päivää
-   - Rasti kohtaan **public_repo** (ei muita)
-4. Kopioi tunniste ja liitä se hallintapaneeliin. Tunniste näytetään vain kerran.
+Ylläpitäjät kirjautuvat **app.pagescms.org**-palveluun sähköpostilla. Heille ei tarvita GitHub-tunnusta.
 
-Tunniste on kuin salasana: älä lähetä sitä kenellekään.
+**Käyttöönotto (kerran, sinä):**
+1. Avaa **https://app.pagescms.org** ja kirjaudu GitHub-tunnuksellasi.
+2. Asenna Pages CMS -sovellus GitHubiin, kun palvelu pyytää. Valitse *Only select repositories* → `tulkaakaikki-kannelmaki`.
+3. Avaa repositorio Pages CMS:ssä. Vasemmalla näkyvät **Ehdokkaat**, **Ajankohtaista** ja **Sivuston tekstit** (asetukset ovat tiedostossa `.pages.yml`).
 
-## 3. Lisää ylläpitäjiä (luvitus)
+**Ylläpitäjän lisääminen:**
+1. Pages CMS:ssä valitse repositorio → **Collaborators**.
+2. Kirjoita ylläpitäjän sähköpostiosoite ja lähetä kutsu.
+3. Ylläpitäjä saa sähköpostin, avaa linkin ja kirjautuu sähköpostiin tulevalla koodilla.
 
-1. Uusi ylläpitäjä tekee itselleen ilmaisen tunnuksen osoitteessa github.com.
-2. Repositoriossa: **Settings → Collaborators → Add people** ja hänen GitHub-tunnuksensa.
-3. Hän hyväksyy kutsun sähköpostista ja tekee itselleen tunnisteen kohdan 2 ohjeella.
-4. Anna hänelle tiedosto `OHJE-YLLAPITAJILLE.md`.
+**Oikeuden poisto:** samasta Collaborators-näkymästä.
 
-**Oikeuden poisto:** Settings → Collaborators → Remove. Pääsy hallintapaneeliin loppuu heti.
+Kaikki muutokset tallentuvat GitHubiin kuten ennenkin, joten historia ja palautukset toimivat.
 
-Jokainen muutos tallentuu historiaan: näet kuka muutti mitä (**Commits**-näkymä), ja minkä tahansa muutoksen voi perua.
+## 3. Vaihtoehtoinen hallintapaneeli GitHub-käyttäjille (Sveltia CMS)
+
+Jos ylläpitäjällä on GitHub-tunnus, hän voi käyttää myös osoitetta `…/tulkaakaikki-kannelmaki/admin/`.
+
+1. Lisää hänet repositorioon: **Settings → Collaborators → Add people**.
+2. Hän tekee tunnisteen: **Settings → Developer settings → Personal access tokens → Tokens (classic) → Generate new token (classic)**, rasti vain kohtaan **public_repo**.
+3. Hallintapaneelissa valitaan **Kirjaudu sisään access tokenilla** ja liitetään tunniste.
+
+Tunniste on kuin salasana: sitä ei lähetetä kenellekään.
 
 ## 4. Oma domain (kun testi on onnistunut)
 
@@ -45,9 +50,9 @@ Jokainen muutos tallentuu historiaan: näet kuka muutti mitä (**Commits**-näky
 4. Vaihda tiedostossa `_config.yml` rivi `baseurl: /tulkaakaikki-kannelmaki` muotoon `baseurl: ""`.
 5. Vaihda tiedostossa `admin/config.yml` `site_url` uudeksi osoitteeksi.
 
-## 5. Helpompi kirjautuminen (valinnainen)
+## 5. Sveltian helpompi kirjautuminen (valinnainen)
 
-Tunnisteen tekeminen on ylläpitäjille hieman kömpelöä. "Kirjaudu GitHubilla" -napin saa käyttöön ilmaisella
+"Kirjaudu GitHubilla" -napin saa käyttöön ilmaisella
 [Sveltia CMS Authenticator](https://github.com/sveltia/sveltia-cms-auth) -palvelulla (Cloudflare Workers):
 
 1. Asenna Authenticator sen ohjeen mukaan ja tee GitHubiin OAuth App.

@@ -1,11 +1,14 @@
 # Ohje ylläpitäjille
 
-Sivuston sisältöä muokataan hallintapaneelissa:
-**https://vvjarvilehto.github.io/tulkaakaikki-kannelmaki/admin/**
+Sivuston sisältöä muokataan hallintapaneelissa: **https://app.pagescms.org**
 
 ## Kirjautuminen
 
-Kirjaudu GitHub-tunnisteella (saat ohjeen pääylläpitäjältä). Selain muistaa kirjautumisen.
+1. Saat sähköpostiin kutsun. Avaa siinä oleva linkki.
+2. Kirjaudu sähköpostiosoitteellasi. Saat sähköpostiin kirjautumiskoodin, jonka syötät sivulle.
+3. Valitse repositorio **tulkaakaikki-kannelmaki**.
+
+Et tarvitse GitHub-tunnusta.
 
 ## Mitä voit muokata
 
@@ -17,16 +20,16 @@ Kirjaudu GitHub-tunnisteella (saat ohjeen pääylläpitäjältä). Selain muista
 
 ## Ehdokkaan lisääminen
 
-1. Valitse **Ehdokkaat → Uusi Ehdokas**.
+1. Valitse **Ehdokkaat** ja paina **Add an entry** (Lisää).
 2. Täytä nimi ja muut tiedot. Kuvan voi raahata kuvakenttään. Pystykuva (4:5) näyttää parhaalta.
 3. **Järjestys** määrää paikan listalla: pienin numero näkyy ensimmäisenä.
-4. Paina **Tallenna**.
+4. Paina **Save**.
 
 ## Uutisen lisääminen
 
-1. Valitse **Ajankohtaista → Uusi Uutinen**.
+1. Valitse **Ajankohtaista** ja paina **Add an entry** (Lisää).
 2. Kirjoita otsikko ja teksti. Tekstiin voi lisätä kuvia editorin työkalupalkista.
-3. Paina **Tallenna**.
+3. Paina **Save**.
 
 ## Milloin muutos näkyy?
 

@@ -1,0 +1,76 @@
+# Pages CMS -hallintapaneelin asetukset (app.pagescms.org).
+# Ylläpitäjät voi kutsua sähköpostilla ilman GitHub-tunnusta.
+media:
+  input: assets/uploads
+  output: /assets/uploads
+
+content:
+  - name: ehdokkaat
+    label: Ehdokkaat
+    type: collection
+    path: _ehdokkaat
+    filename: "{primary}.md"
+    view:
+      fields: [jarjestys, title, numero]
+      primary: title
+      sort: [jarjestys, title]
+      default:
+        sort: jarjestys
+        order: asc
+    fields:
+      - { name: title, label: Nimi, type: string, required: true }
+      - { name: numero, label: Ehdokasnumero, type: string, description: "Täytä, kun numero on vahvistettu." }
+      - { name: titteli, label: Ammatti tai titteli, type: string }
+      - { name: kuva, label: Kuva, type: image, description: "Mieluiten pystykuva (4:5)." }
+      - { name: lyhyesti, label: Lyhyt esittely, type: text, description: "1–2 lausetta. Näkyy etusivun ehdokaskortissa." }
+      - { name: jarjestys, label: Järjestys, type: number, default: 99, description: "Pienin numero näkyy ensimmäisenä." }
+      - { name: body, label: Pidempi esittely, type: rich-text }
+
+  - name: uutiset
+    label: Ajankohtaista
+    type: collection
+    path: _posts
+    filename: "{year}-{month}-{day}-{primary}.md"
+    view:
+      fields: [title, date]
+      primary: title
+      default:
+        sort: date
+        order: desc
+    fields:
+      - { name: title, label: Otsikko, type: string, required: true }
+      - { name: date, label: Päivämäärä, type: date }
+      - { name: kuva, label: Pääkuva, type: image }
+      - { name: body, label: Teksti, type: rich-text }
+
+  - name: sivusto
+    label: Sivuston tekstit
+    type: file
+    path: _data/sivusto.yml
+    format: yaml
+    fields:
+      - { name: otsikko, label: Etusivun pääotsikko, type: string }
+      - { name: ingressi, label: Etusivun johdanto, type: text }
+      - { name: hero_kuva, label: Etusivun kuva, type: image, description: "Jos tyhjä, näytetään Tulkaa kaikki -kynttilä." }
+      - { name: teemat_otsikko, label: Teemojen otsikko, type: string }
+      - name: teemat
+        label: Teemat
+        type: object
+        list: true
+        fields:
+          - { name: otsikko, label: Otsikko, type: string }
+          - { name: teksti, label: Teksti, type: text }
+      - { name: vaalit_otsikko, label: Äänestysosion otsikko, type: string }
+      - { name: vaalit_teksti, label: Äänestysosion teksti, type: text }
+      - { name: ennakkoaanestys, label: Ennakkoäänestys, type: string }
+      - { name: vaalipaiva, label: Vaalipäivä, type: string }
+      - { name: aanestyspaikat_linkki, label: Linkki äänestyspaikkoihin, type: string }
+      - { name: yhteystiedot_teksti, label: Yhteystietojen teksti, type: text }
+      - { name: sahkoposti, label: Sähköposti, type: string }
+      - name: some
+        label: Some-linkit
+        type: object
+        list: true
+        fields:
+          - { name: nimi, label: Palvelu, type: string }
+          - { name: linkki, label: Osoite, type: string }
