@@ -1,17 +1,17 @@
 otsikko: Tulkaa kaikki Kannelmäessä
-ingressi: Avoin, välittävä ja kaikille yhteinen kirkko. Äänestä Tulkaa kaikki -listan ehdokasta Kannelmäen seurakunnan seurakuntavaaleissa.
+ingressi: Rakennamme Kannelmäen seurakuntaa, johon jokainen on tervetullut. Edistämme tasa-arvoa, yhdenvertaisuutta ja avointa päätöksentekoa kirkossa.
 hero_kuva: ""
 
 teemat_otsikko: Mitä me ajamme
 teemat:
-  - otsikko: Kaikille avoin seurakunta
-    teksti: Jokainen on tervetullut sellaisena kuin on. Seurakunnan ovet ja toiminta ovat auki kaikille.
-  - otsikko: Lähellä ihmistä
-    teksti: Diakonia, nuorisotyö ja arjen kohtaamiset Kannelmäessä ovat seurakunnan sydän.
-  - otsikko: Yhdenvertainen kirkko
-    teksti: Tasa-arvoinen avioliitto ja yhdenvertainen kohtelu kuuluvat kirkolle, joka toivottaa kaikki tervetulleiksi.
-  - otsikko: Vastuu luomakunnasta
-    teksti: Kestävät valinnat seurakunnan kiinteistöissä, hankinnoissa ja toiminnassa.
+  - otsikko: Jokainen on tervetullut
+    teksti: Seurakunta on paikka, jossa erilaiset ihmiset kohtaavat toisensa kunnioittavasti ja voivat osallistua täysivaltaisesti seurakunnan elämään.
+  - otsikko: Tasa-arvoinen avioliitto
+    teksti: Kannatamme tasa-arvoisen avioliittolain toteuttamista kirkossa.
+  - otsikko: Tasa-arvoinen papisto
+    teksti: Haluamme, että kirkossa on tasa-arvoinen papisto sukupuoleen katsomatta.
+  - otsikko: Avoin päätöksenteko
+    teksti: Seurakuntaa kehitetään parhaiten yhdessä. Kannustamme jokaista kertomaan näkemyksensä ja vaikuttamaan yhteisiin asioihin.
 
 vaalit_otsikko: Äänestä seurakuntavaaleissa
 vaalit_teksti: Äänestää voi jokainen vähintään 16-vuotias seurakunnan jäsen. Muista ottaa mukaan henkilöllisyystodistus.

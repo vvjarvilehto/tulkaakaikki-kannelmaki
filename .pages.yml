@@ -19,18 +19,18 @@ content:
         order: asc
     fields:
       - { name: title, label: Nimi, type: string, required: true }
-      - name: seurakuntaneuvosto
-        label: Seurakuntaneuvosto
-        type: object
-        fields:
-          - { name: ehdolla, label: Ehdolla seurakuntaneuvostoon, type: boolean, default: false }
-          - { name: numero, label: Ehdokasnumero (seurakuntaneuvosto), type: string, description: "Täytä, kun numero on vahvistettu." }
       - name: kirkkovaltuusto
         label: Kirkkovaltuusto
         type: object
         fields:
           - { name: ehdolla, label: Ehdolla kirkkovaltuustoon, type: boolean, default: false }
           - { name: numero, label: Ehdokasnumero (kirkkovaltuusto), type: string, description: "Täytä, kun numero on vahvistettu." }
+      - name: seurakuntaneuvosto
+        label: Seurakuntaneuvosto
+        type: object
+        fields:
+          - { name: ehdolla, label: Ehdolla seurakuntaneuvostoon, type: boolean, default: false }
+          - { name: numero, label: Ehdokasnumero (seurakuntaneuvosto), type: string, description: "Täytä, kun numero on vahvistettu." }
       - { name: titteli, label: Ammatti tai titteli, type: string }
       - { name: kuva, label: Kuva, type: image, description: "Neliön muotoinen kuva, kasvot keskellä." }
       - { name: lyhyesti, label: Lyhyt esittely, type: text, description: "1–2 lausetta. Näkyy etusivun ehdokaskortissa." }
