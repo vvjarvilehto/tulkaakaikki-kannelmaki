@@ -7,7 +7,7 @@ kirkkovaltuusto:
   ehdolla: false
   numero: ""
 titteli: "Yliopistonlehtori"
-kuva: ""
+kuva: /assets/uploads/martti-makinen.jpg
 lyhyesti: ""
 jarjestys: 10
 ---

@@ -7,7 +7,7 @@ kirkkovaltuusto:
   ehdolla: true
   numero: "7"
 titteli: "Talouspäällikkö, HTM"
-kuva: ""
+kuva: /assets/uploads/sini-elina-karsama.jpg
 lyhyesti: ""
 jarjestys: 9
 ---

@@ -7,7 +7,7 @@ kirkkovaltuusto:
   ehdolla: true
   numero: "3"
 titteli: "Kannelmäen kierrätyspisteen perustajajäsen"
-kuva: ""
+kuva: /assets/uploads/christian-gonzalez-torres.jpg
 lyhyesti: ""
 jarjestys: 2
 ---

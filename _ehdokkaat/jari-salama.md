@@ -7,7 +7,7 @@ kirkkovaltuusto:
   ehdolla: true
   numero: "11"
 titteli: "Eläkeläinen"
-kuva: ""
+kuva: /assets/uploads/jari-salama.jpg
 lyhyesti: ""
 jarjestys: 19
 ---

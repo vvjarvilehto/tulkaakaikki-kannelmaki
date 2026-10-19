@@ -7,7 +7,7 @@ kirkkovaltuusto:
   ehdolla: true
   numero: "13"
 titteli: "TM, pappi"
-kuva: ""
+kuva: /assets/uploads/johanna-ylaranta-suha.jpg
 lyhyesti: ""
 jarjestys: 21
 ---

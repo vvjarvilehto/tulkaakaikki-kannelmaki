@@ -7,7 +7,7 @@ kirkkovaltuusto:
   ehdolla: true
   numero: "6"
 titteli: "Apulaisosastonhoitaja, sairaanhoitaja"
-kuva: ""
+kuva: /assets/uploads/rhoda-korpijarvi.jpg
 lyhyesti: ""
 jarjestys: 8
 ---

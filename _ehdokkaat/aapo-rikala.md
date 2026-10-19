@@ -7,7 +7,7 @@ kirkkovaltuusto:
   ehdolla: false
   numero: ""
 titteli: "Sosionomi-diakoni, erikoiskirjastovirkailija"
-kuva: ""
+kuva: /assets/uploads/aapo-rikala.jpg
 lyhyesti: ""
 jarjestys: 15
 ---

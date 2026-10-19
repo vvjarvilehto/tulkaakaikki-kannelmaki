@@ -7,7 +7,7 @@ kirkkovaltuusto:
   ehdolla: true
   numero: "4"
 titteli: "Varhaiskasvatuksen erityisopettaja, KM"
-kuva: ""
+kuva: /assets/uploads/outi-halenius.jpg
 lyhyesti: ""
 jarjestys: 3
 ---

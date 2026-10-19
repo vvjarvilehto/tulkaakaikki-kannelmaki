@@ -7,7 +7,7 @@ kirkkovaltuusto:
   ehdolla: false
   numero: ""
 titteli: "Opettaja (AMK), diakoni"
-kuva: ""
+kuva: /assets/uploads/heini-sajalin.jpg
 lyhyesti: ""
 jarjestys: 18
 ---

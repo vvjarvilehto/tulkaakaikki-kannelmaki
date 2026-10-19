@@ -7,7 +7,7 @@ kirkkovaltuusto:
   ehdolla: true
   numero: "10"
 titteli: "Pastori, sosionomi AMK"
-kuva: ""
+kuva: /assets/uploads/sini-saavalainen.jpg
 lyhyesti: ""
 jarjestys: 17
 ---

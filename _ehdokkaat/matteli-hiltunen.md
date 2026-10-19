@@ -7,7 +7,7 @@ kirkkovaltuusto:
   ehdolla: false
   numero: ""
 titteli: "vs. nuorisotyönohjaaja"
-kuva: ""
+kuva: /assets/uploads/matteli-hiltunen.jpg
 lyhyesti: ""
 jarjestys: 5
 ---

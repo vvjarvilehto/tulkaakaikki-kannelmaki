@@ -7,7 +7,7 @@ kirkkovaltuusto:
   ehdolla: true
   numero: "8"
 titteli: "Sosionomi, rikosseuraamustyöntekijä"
-kuva: ""
+kuva: /assets/uploads/sanna-mari-oranen.jpg
 lyhyesti: ""
 jarjestys: 12
 ---

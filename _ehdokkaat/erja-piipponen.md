@@ -7,7 +7,7 @@ kirkkovaltuusto:
   ehdolla: true
   numero: "9"
 titteli: "YTK, tiedottaja eläkkeellä"
-kuva: ""
+kuva: /assets/uploads/erja-piipponen.jpg
 lyhyesti: ""
 jarjestys: 14
 ---

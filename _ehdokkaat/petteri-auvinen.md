@@ -7,7 +7,7 @@ kirkkovaltuusto:
   ehdolla: true
   numero: "2"
 titteli: "YO-merkonomi, maksupalveluasiantuntija"
-kuva: ""
+kuva: /assets/uploads/petteri-auvinen.jpg
 lyhyesti: ""
 jarjestys: 1
 ---

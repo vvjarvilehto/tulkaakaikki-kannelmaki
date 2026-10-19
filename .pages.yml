@@ -32,7 +32,7 @@ content:
           - { name: ehdolla, label: Ehdolla kirkkovaltuustoon, type: boolean, default: false }
           - { name: numero, label: Ehdokasnumero (kirkkovaltuusto), type: string, description: "Täytä, kun numero on vahvistettu." }
       - { name: titteli, label: Ammatti tai titteli, type: string }
-      - { name: kuva, label: Kuva, type: image, description: "Mieluiten pystykuva (4:5)." }
+      - { name: kuva, label: Kuva, type: image, description: "Neliön muotoinen kuva, kasvot keskellä." }
       - { name: lyhyesti, label: Lyhyt esittely, type: text, description: "1–2 lausetta. Näkyy etusivun ehdokaskortissa." }
       - { name: jarjestys, label: Järjestys, type: number, default: 99, description: "Pienin numero näkyy ensimmäisenä." }
       - { name: body, label: Pidempi esittely, type: rich-text }

@@ -7,7 +7,7 @@ kirkkovaltuusto:
   ehdolla: false
   numero: ""
 titteli: "KM, luokan ja matematiikan opettaja"
-kuva: ""
+kuva: /assets/uploads/mikko-niiniluoto.jpg
 lyhyesti: ""
 jarjestys: 11
 ---

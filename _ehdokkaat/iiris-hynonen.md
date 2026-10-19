@@ -7,7 +7,7 @@ kirkkovaltuusto:
   ehdolla: false
   numero: ""
 titteli: "Järjestöpäällikkö"
-kuva: ""
+kuva: /assets/uploads/iiris-hynonen.jpg
 lyhyesti: ""
 jarjestys: 6
 ---

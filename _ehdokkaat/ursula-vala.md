@@ -7,7 +7,7 @@ kirkkovaltuusto:
   ehdolla: true
   numero: "12"
 titteli: "Erikoislääkäri"
-kuva: ""
+kuva: /assets/uploads/ursula-vala.jpg
 lyhyesti: ""
 jarjestys: 20
 ---
