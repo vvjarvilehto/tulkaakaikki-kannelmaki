@@ -19,10 +19,4 @@ ennakkoaanestys: "Ennakkoäänestys: [tarkista päivät]"
 vaalipaiva: "Vaalipäivä: [tarkista päivä]"
 aanestyspaikat_linkki: https://www.helsinginseurakunnat.fi/
 
-yhteystiedot_teksti: Haluatko kysyä ehdokkailta jotain tai lähteä mukaan kampanjaan? Ota yhteyttä!
-sahkoposti: tulkaakaikki.kannelmaki@example.fi
-some:
-  - nimi: Instagram
-    linkki: https://www.instagram.com/
-  - nimi: Facebook
-    linkki: https://www.facebook.com/
+facebook: https://www.facebook.com/

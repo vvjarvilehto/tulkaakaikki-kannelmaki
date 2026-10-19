@@ -18,7 +18,7 @@ Ylläpitäjät kirjautuvat **app.pagescms.org**-palveluun sähköpostilla. Heill
 **Käyttöönotto (kerran, sinä):**
 1. Avaa **https://app.pagescms.org** ja kirjaudu GitHub-tunnuksellasi.
 2. Asenna Pages CMS -sovellus GitHubiin, kun palvelu pyytää. Valitse *Only select repositories* → `tulkaakaikki-kannelmaki`.
-3. Avaa repositorio Pages CMS:ssä. Vasemmalla näkyvät **Ehdokkaat**, **Ajankohtaista** ja **Sivuston tekstit** (asetukset ovat tiedostossa `.pages.yml`).
+3. Avaa repositorio Pages CMS:ssä. Vasemmalla näkyvät **Ehdokkaat** ja **Sivuston tekstit** (asetukset ovat tiedostossa `.pages.yml`).
 
 **Ylläpitäjän lisääminen:**
 1. Pages CMS:ssä valitse repositorio → **Collaborators**.

@@ -13,8 +13,7 @@ Tulkaa kaikki -ehdokaslistan sivusto Kannelmäen seurakunnan seurakuntavaaleihin
 | Kansio / tiedosto | Sisältö |
 |---|---|
 | `_ehdokkaat/` | Yksi tiedosto per ehdokas |
-| `_posts/` | Ajankohtaista-uutiset |
-| `_data/sivusto.yml` | Etusivun tekstit, teemat, vaalitiedot, yhteystiedot |
+| `_data/sivusto.yml` | Etusivun tekstit, teemat, vaalitiedot, Facebook-linkki |
 | `assets/uploads/` | Hallintapaneelista ladatut kuvat |
 | `assets/img/` | Tulkaa kaikki -logot |
 

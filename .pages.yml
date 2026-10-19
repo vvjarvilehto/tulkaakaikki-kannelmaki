@@ -26,22 +26,6 @@ content:
       - { name: jarjestys, label: Järjestys, type: number, default: 99, description: "Pienin numero näkyy ensimmäisenä." }
       - { name: body, label: Pidempi esittely, type: rich-text }
 
-  - name: uutiset
-    label: Ajankohtaista
-    type: collection
-    path: _posts
-    filename: "{year}-{month}-{day}-{primary}.md"
-    view:
-      fields: [title, date]
-      primary: title
-      default:
-        sort: date
-        order: desc
-    fields:
-      - { name: title, label: Otsikko, type: string, required: true }
-      - { name: date, label: Päivämäärä, type: date }
-      - { name: kuva, label: Pääkuva, type: image }
-      - { name: body, label: Teksti, type: rich-text }
 
   - name: sivusto
     label: Sivuston tekstit
@@ -65,12 +49,4 @@ content:
       - { name: ennakkoaanestys, label: Ennakkoäänestys, type: string }
       - { name: vaalipaiva, label: Vaalipäivä, type: string }
       - { name: aanestyspaikat_linkki, label: Linkki äänestyspaikkoihin, type: string }
-      - { name: yhteystiedot_teksti, label: Yhteystietojen teksti, type: text }
-      - { name: sahkoposti, label: Sähköposti, type: string }
-      - name: some
-        label: Some-linkit
-        type: object
-        list: true
-        fields:
-          - { name: nimi, label: Palvelu, type: string }
-          - { name: linkki, label: Osoite, type: string }
+      - { name: facebook, label: Facebook-sivun osoite, type: string }

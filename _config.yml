@@ -8,7 +8,6 @@ baseurl: /tulkaakaikki-kannelmaki
 url: ""
 
 markdown: kramdown
-permalink: /ajankohtaista/:year/:month/:title/
 
 collections:
   ehdokkaat:
@@ -18,8 +17,6 @@ collections:
 defaults:
   - scope: { path: "", type: ehdokkaat }
     values: { layout: ehdokas }
-  - scope: { path: "", type: posts }
-    values: { layout: artikkeli }
 
 exclude:
   - README.md

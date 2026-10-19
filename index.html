@@ -49,26 +49,6 @@ layout: default
   </div>
 </section>
 
-<section id="ajankohtaista" class="osio">
-  <div class="kehys">
-    <h2>Ajankohtaista</h2>
-    <div class="uutiset">
-      {%- for p in site.posts limit: 3 %}
-      <article class="uutinen">
-        <a href="{{ p.url | relative_url }}">
-          {%- if p.kuva and p.kuva != "" %}<img src="{% include kuva.html src=p.kuva %}" alt="" loading="lazy">{% endif %}
-          <time datetime="{{ p.date | date: '%Y-%m-%d' }}">{{ p.date | date: '%-d.%-m.%Y' }}</time>
-          <h3>{{ p.title }}</h3>
-        </a>
-        <p>{{ p.excerpt | strip_html | truncatewords: 30 }}</p>
-      </article>
-      {%- endfor %}
-    </div>
-    {%- if site.posts.size > 3 %}
-    <p><a href="{{ '/ajankohtaista/' | relative_url }}">Kaikki uutiset →</a></p>
-    {%- endif %}
-  </div>
-</section>
 
 <section id="aanesta" class="osio osio--aanesta">
   <div class="kehys aanesta">
@@ -84,10 +64,3 @@ layout: default
   </div>
 </section>
 
-<section id="yhteystiedot" class="osio">
-  <div class="kehys">
-    <h2>Ota yhteyttä</h2>
-    <p>{{ s.yhteystiedot_teksti }}</p>
-    <p><a class="nappi nappi--toissijainen" href="mailto:{{ s.sahkoposti }}">{{ s.sahkoposti }}</a></p>
-  </div>
-</section>

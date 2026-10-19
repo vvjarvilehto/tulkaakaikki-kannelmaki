@@ -37,24 +37,12 @@ collections:
       - { name: jarjestys, label: Järjestys, widget: number, value_type: int, default: 99 }
       - { name: body, label: Pidempi esittely, widget: markdown, required: false }
 
-  - name: uutiset
-    label: Ajankohtaista
-    label_singular: Uutinen
-    folder: _posts
-    create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    sortable_fields: [date, title]
-    fields:
-      - { name: title, label: Otsikko, widget: string }
-      - { name: date, label: Päivämäärä, widget: datetime, time_format: false, date_format: "YYYY-MM-DD", format: "YYYY-MM-DD" }
-      - { name: kuva, label: Pääkuva, widget: image, required: false }
-      - { name: body, label: Teksti, widget: markdown }
 
   - name: asetukset
     label: Sivuston tekstit
     files:
       - name: sivusto
-        label: Etusivu, teemat ja yhteystiedot
+        label: Etusivu, teemat ja vaalitiedot
         file: _data/sivusto.yml
         fields:
           - { name: otsikko, label: Etusivun pääotsikko, widget: string }
@@ -73,12 +61,4 @@ collections:
           - { name: ennakkoaanestys, label: Ennakkoäänestys, widget: string }
           - { name: vaalipaiva, label: Vaalipäivä, widget: string }
           - { name: aanestyspaikat_linkki, label: Linkki äänestyspaikkoihin, widget: string }
-          - { name: yhteystiedot_teksti, label: Yhteystietojen teksti, widget: text }
-          - { name: sahkoposti, label: Sähköposti, widget: string }
-          - name: some
-            label: Some-linkit
-            label_singular: Linkki
-            widget: list
-            fields:
-              - { name: nimi, label: Palvelu, widget: string }
-              - { name: linkki, label: Osoite, widget: string }
+          - { name: facebook, label: Facebook-sivun osoite, widget: string, required: false }

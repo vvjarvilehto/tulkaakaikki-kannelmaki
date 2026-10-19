@@ -95,13 +95,6 @@ h3 { font-size: 1.25rem; }
 .ehdokassivu__numero { font-size: 1.125rem; margin: 0 0 0.25rem; }
 .ehdokassivu__numero strong { color: var(--magenta); font-size: 1.75rem; }
 
-/* Uutiset */
-.uutiset { display: grid; grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr)); gap: 2rem; margin-top: 1rem; }
-.uutinen a { text-decoration: none; color: var(--musta); }
-.uutinen a:hover h3 { color: var(--magenta); }
-.uutinen img { border-radius: var(--pyoristys); aspect-ratio: 16 / 10; object-fit: cover; width: 100%; margin-bottom: 0.75rem; }
-.uutinen time, article time { display: block; color: var(--harmaa); font-size: 0.9rem; }
-.artikkeli__kuva { border-radius: var(--pyoristys); margin: 1.5rem 0; }
 .leipateksti img { border-radius: var(--pyoristys); margin: 1.5rem 0; }
 
 /* Äänestä */
@@ -118,7 +111,6 @@ h3 { font-size: 1.25rem; }
 .alapalkki__sisus { display: flex; flex-wrap: wrap; gap: 2rem; align-items: center; }
 .alapalkki img { width: 180px; }
 .alapalkki a { color: var(--keltainen); }
-.some { display: flex; gap: 1rem; list-style: none; padding: 0; margin: 0; }
 
 @media (max-width: 760px) {
   .hero__sisus, .ehdokassivu { grid-template-columns: 1fr; }

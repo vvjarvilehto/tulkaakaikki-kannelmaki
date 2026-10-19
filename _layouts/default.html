@@ -23,7 +23,6 @@
         <ul>
           <li><a href="{{ '/#teemat' | relative_url }}">Teemat</a></li>
           <li><a href="{{ '/#ehdokkaat' | relative_url }}">Ehdokkaat</a></li>
-          <li><a href="{{ '/#ajankohtaista' | relative_url }}">Ajankohtaista</a></li>
           <li><a class="nappi nappi--pieni" href="{{ '/#aanesta' | relative_url }}">Äänestä</a></li>
         </ul>
       </nav>
@@ -40,13 +39,8 @@
       <img src="{{ '/assets/img/logo-nega.svg' | relative_url }}" alt="Tulkaa kaikki – Kom alla" width="180" height="87">
       <div>
         <p><strong>Tulkaa kaikki – Kannelmäki</strong><br>Ehdokaslista Kannelmäen seurakunnan seurakuntavaaleissa</p>
-        <p><a href="mailto:{{ site.data.sivusto.sahkoposti }}">{{ site.data.sivusto.sahkoposti }}</a></p>
-        {%- if site.data.sivusto.some -%}
-        <ul class="some">
-          {%- for s in site.data.sivusto.some %}
-          <li><a href="{{ s.linkki }}">{{ s.nimi }}</a></li>
-          {%- endfor %}
-        </ul>
+        {%- if site.data.sivusto.facebook and site.data.sivusto.facebook != "" %}
+        <p><a href="{{ site.data.sivusto.facebook }}">Seuraa meitä Facebookissa</a></p>
         {%- endif %}
       </div>
     </div>
