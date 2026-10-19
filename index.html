@@ -1,0 +1,93 @@
+---
+layout: default
+---
+{%- assign s = site.data.sivusto -%}
+<section class="hero">
+  <div class="kehys hero__sisus">
+    <div class="hero__teksti">
+      <p class="yla">Seurakuntavaalit 2026 · Kannelmäen seurakunta</p>
+      <h1>{{ s.otsikko }}</h1>
+      <p class="ingressi">{{ s.ingressi }}</p>
+      <p class="napit">
+        <a class="nappi" href="#ehdokkaat">Tutustu ehdokkaisiin</a>
+        <a class="nappi nappi--toissijainen" href="#aanesta">Näin äänestät</a>
+      </p>
+    </div>
+    <div class="hero__kuva">
+      {%- if s.hero_kuva and s.hero_kuva != "" %}
+      <img src="{% include kuva.html src=s.hero_kuva %}" alt="">
+      {%- else %}
+      <img class="hero__symboli" src="{{ '/assets/img/kynttila.svg' | relative_url }}" alt="">
+      {%- endif %}
+    </div>
+  </div>
+</section>
+
+<section id="teemat" class="osio">
+  <div class="kehys">
+    <h2>{{ s.teemat_otsikko }}</h2>
+    <ul class="teemat">
+      {%- for t in s.teemat %}
+      <li>
+        <h3>{{ t.otsikko }}</h3>
+        <p>{{ t.teksti }}</p>
+      </li>
+      {%- endfor %}
+    </ul>
+  </div>
+</section>
+
+<section id="ehdokkaat" class="osio osio--vaalea">
+  <div class="kehys">
+    <h2>Ehdokkaamme</h2>
+    <div class="ehdokkaat">
+      {%- assign ehdokkaat = site.ehdokkaat | sort: "jarjestys" -%}
+      {%- for e in ehdokkaat %}
+      {% include ehdokaskortti.html ehdokas=e %}
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+<section id="ajankohtaista" class="osio">
+  <div class="kehys">
+    <h2>Ajankohtaista</h2>
+    <div class="uutiset">
+      {%- for p in site.posts limit: 3 %}
+      <article class="uutinen">
+        <a href="{{ p.url | relative_url }}">
+          {%- if p.kuva and p.kuva != "" %}<img src="{% include kuva.html src=p.kuva %}" alt="" loading="lazy">{% endif %}
+          <time datetime="{{ p.date | date: '%Y-%m-%d' }}">{{ p.date | date: '%-d.%-m.%Y' }}</time>
+          <h3>{{ p.title }}</h3>
+        </a>
+        <p>{{ p.excerpt | strip_html | truncatewords: 30 }}</p>
+      </article>
+      {%- endfor %}
+    </div>
+    {%- if site.posts.size > 3 %}
+    <p><a href="{{ '/ajankohtaista/' | relative_url }}">Kaikki uutiset →</a></p>
+    {%- endif %}
+  </div>
+</section>
+
+<section id="aanesta" class="osio osio--aanesta">
+  <div class="kehys aanesta">
+    <div>
+      <h2>{{ s.vaalit_otsikko }}</h2>
+      <p>{{ s.vaalit_teksti }}</p>
+      <ul class="paivat">
+        <li>{{ s.ennakkoaanestys }}</li>
+        <li>{{ s.vaalipaiva }}</li>
+      </ul>
+      <p><a class="nappi" href="{{ s.aanestyspaikat_linkki }}">Katso äänestyspaikat</a></p>
+    </div>
+  </div>
+</section>
+
+<section id="yhteystiedot" class="osio">
+  <div class="kehys">
+    <h2>Ota yhteyttä</h2>
+    <p>{{ s.yhteystiedot_teksti }}</p>
+    <p><a class="nappi nappi--toissijainen" href="mailto:{{ s.sahkoposti }}">{{ s.sahkoposti }}</a></p>
+  </div>
+</section>

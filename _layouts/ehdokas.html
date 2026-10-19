@@ -1,0 +1,22 @@
+---
+layout: default
+---
+<article class="osio">
+  <div class="kehys ehdokassivu">
+    <div class="ehdokassivu__kuva">
+      {%- if page.kuva and page.kuva != "" %}
+      <img src="{% include kuva.html src=page.kuva %}" alt="{{ page.title }}">
+      {%- else %}
+      <img class="paikkamerkki" src="{{ '/assets/img/kynttila.svg' | relative_url }}" alt="">
+      {%- endif %}
+    </div>
+    <div class="ehdokassivu__teksti">
+      <p class="yla"><a href="{{ '/#ehdokkaat' | relative_url }}">← Kaikki ehdokkaat</a></p>
+      {%- if page.numero and page.numero != "" %}<p class="ehdokassivu__numero">Ehdokasnumero <strong>{{ page.numero }}</strong></p>{% endif %}
+      <h1>{{ page.title }}</h1>
+      {%- if page.titteli %}<p class="ehdokas__titteli">{{ page.titteli }}</p>{% endif %}
+      {%- if page.lyhyesti %}<p class="ingressi">{{ page.lyhyesti }}</p>{% endif %}
+      <div class="leipateksti">{{ content }}</div>
+    </div>
+  </div>
+</article>

@@ -1,0 +1,29 @@
+title: Tulkaa kaikki – Kannelmäki
+description: Tulkaa kaikki -ehdokaslista Kannelmäen seurakunnan seurakuntavaaleissa.
+lang: fi
+
+# GitHub Pages -testiosoitteessa sivusto on alikansiossa /tulkaakaikki-kannelmaki.
+# Kun oma domain otetaan käyttöön, vaihda baseurl tyhjäksi: baseurl: ""
+baseurl: /tulkaakaikki-kannelmaki
+url: ""
+
+markdown: kramdown
+permalink: /ajankohtaista/:year/:month/:title/
+
+collections:
+  ehdokkaat:
+    output: true
+    permalink: /ehdokkaat/:name/
+
+defaults:
+  - scope: { path: "", type: ehdokkaat }
+    values: { layout: ehdokas }
+  - scope: { path: "", type: posts }
+    values: { layout: artikkeli }
+
+exclude:
+  - README.md
+  - OHJE-YLLAPITAJILLE.md
+  - OHJE-KAYTTOONOTTO.md
+  - Gemfile
+  - Gemfile.lock

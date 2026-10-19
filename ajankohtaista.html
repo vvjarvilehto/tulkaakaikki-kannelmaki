@@ -1,0 +1,22 @@
+---
+layout: default
+title: Ajankohtaista
+permalink: /ajankohtaista/
+---
+<section class="osio">
+  <div class="kehys">
+    <h1>Ajankohtaista</h1>
+    <div class="uutiset">
+      {%- for p in site.posts %}
+      <article class="uutinen">
+        <a href="{{ p.url | relative_url }}">
+          {%- if p.kuva and p.kuva != "" %}<img src="{% include kuva.html src=p.kuva %}" alt="" loading="lazy">{% endif %}
+          <time datetime="{{ p.date | date: '%Y-%m-%d' }}">{{ p.date | date: '%-d.%-m.%Y' }}</time>
+          <h3>{{ p.title }}</h3>
+        </a>
+        <p>{{ p.excerpt | strip_html | truncatewords: 30 }}</p>
+      </article>
+      {%- endfor %}
+    </div>
+  </div>
+</section>

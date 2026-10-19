@@ -1,0 +1,84 @@
+# Hallintapaneelin (Sveltia CMS) asetukset.
+backend:
+  name: github
+  repo: vvjarvilehto/tulkaakaikki-kannelmaki
+  branch: main
+  # Testivaiheessa kirjaudutaan GitHubin henkilökohtaisella tunnisteella (token).
+  # Myöhemmin voi ottaa käyttöön "Kirjaudu GitHubilla" -napin, ks. OHJE-KAYTTOONOTTO.md.
+  auth_methods: [token]
+  commit_messages:
+    create: "Lisätty {{collection}}: {{slug}} ({{author-login}})"
+    update: "Päivitetty {{collection}}: {{slug}} ({{author-login}})"
+    delete: "Poistettu {{collection}}: {{slug}} ({{author-login}})"
+    uploadMedia: "Ladattu kuva {{path}} ({{author-login}})"
+    deleteMedia: "Poistettu kuva {{path}} ({{author-login}})"
+
+app_title: Tulkaa kaikki Kannelmäki
+site_url: https://vvjarvilehto.github.io/tulkaakaikki-kannelmaki/
+media_folder: assets/uploads
+public_folder: /assets/uploads
+
+collections:
+  - name: ehdokkaat
+    label: Ehdokkaat
+    label_singular: Ehdokas
+    description: Listan ehdokkaat. Järjestysnumero määrää, missä järjestyksessä ehdokkaat näkyvät sivulla.
+    folder: _ehdokkaat
+    create: true
+    slug: "{{title}}"
+    sortable_fields: [jarjestys, title]
+    summary: "{{jarjestys}}. {{title}}"
+    fields:
+      - { name: title, label: Nimi, widget: string }
+      - { name: numero, label: Ehdokasnumero, widget: string, required: false, hint: "Täytä, kun numero on vahvistettu." }
+      - { name: titteli, label: Ammatti tai titteli, widget: string, required: false }
+      - { name: kuva, label: Kuva, widget: image, required: false, hint: "Mieluiten pystykuva (4:5)." }
+      - { name: lyhyesti, label: Lyhyt esittely, widget: text, required: false, hint: "1–2 lausetta. Näkyy etusivun ehdokaskortissa." }
+      - { name: jarjestys, label: Järjestys, widget: number, value_type: int, default: 99 }
+      - { name: body, label: Pidempi esittely, widget: markdown, required: false }
+
+  - name: uutiset
+    label: Ajankohtaista
+    label_singular: Uutinen
+    folder: _posts
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    sortable_fields: [date, title]
+    fields:
+      - { name: title, label: Otsikko, widget: string }
+      - { name: date, label: Päivämäärä, widget: datetime, time_format: false, date_format: "YYYY-MM-DD", format: "YYYY-MM-DD" }
+      - { name: kuva, label: Pääkuva, widget: image, required: false }
+      - { name: body, label: Teksti, widget: markdown }
+
+  - name: asetukset
+    label: Sivuston tekstit
+    files:
+      - name: sivusto
+        label: Etusivu, teemat ja yhteystiedot
+        file: _data/sivusto.yml
+        fields:
+          - { name: otsikko, label: Etusivun pääotsikko, widget: string }
+          - { name: ingressi, label: Etusivun johdanto, widget: text }
+          - { name: hero_kuva, label: Etusivun kuva, widget: image, required: false, hint: "Jos tyhjä, näytetään Tulkaa kaikki -kynttilä." }
+          - { name: teemat_otsikko, label: Teemojen otsikko, widget: string }
+          - name: teemat
+            label: Teemat
+            label_singular: Teema
+            widget: list
+            fields:
+              - { name: otsikko, label: Otsikko, widget: string }
+              - { name: teksti, label: Teksti, widget: text }
+          - { name: vaalit_otsikko, label: Äänestysosion otsikko, widget: string }
+          - { name: vaalit_teksti, label: Äänestysosion teksti, widget: text }
+          - { name: ennakkoaanestys, label: Ennakkoäänestys, widget: string }
+          - { name: vaalipaiva, label: Vaalipäivä, widget: string }
+          - { name: aanestyspaikat_linkki, label: Linkki äänestyspaikkoihin, widget: string }
+          - { name: yhteystiedot_teksti, label: Yhteystietojen teksti, widget: text }
+          - { name: sahkoposti, label: Sähköposti, widget: string }
+          - name: some
+            label: Some-linkit
+            label_singular: Linkki
+            widget: list
+            fields:
+              - { name: nimi, label: Palvelu, widget: string }
+              - { name: linkki, label: Osoite, widget: string }

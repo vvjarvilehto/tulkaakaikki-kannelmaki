@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="fi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.title }}</title>
+  <meta name="description" content="{{ page.lyhyesti | default: site.description }}">
+  <link rel="icon" href="{{ '/assets/img/logo.svg' | relative_url }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+</head>
+<body>
+  <a class="ohita" href="#sisalto">Siirry sisältöön</a>
+  <header class="ylapalkki">
+    <div class="kehys ylapalkki__sisus">
+      <a class="ylapalkki__logo" href="{{ '/' | relative_url }}">
+        <img src="{{ '/assets/img/logo.svg' | relative_url }}" alt="Tulkaa kaikki – Kom alla" width="146" height="71">
+        <span>Kannelmäki</span>
+      </a>
+      <nav aria-label="Päävalikko">
+        <ul>
+          <li><a href="{{ '/#teemat' | relative_url }}">Teemat</a></li>
+          <li><a href="{{ '/#ehdokkaat' | relative_url }}">Ehdokkaat</a></li>
+          <li><a href="{{ '/#ajankohtaista' | relative_url }}">Ajankohtaista</a></li>
+          <li><a class="nappi nappi--pieni" href="{{ '/#aanesta' | relative_url }}">Äänestä</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="sisalto">
+    {%- assign korjattu = 'src="' | append: site.baseurl | append: '/assets/' -%}
+    {{ content | replace: 'src="/assets/', korjattu }}
+  </main>
+
+  <footer class="alapalkki">
+    <div class="kehys alapalkki__sisus">
+      <img src="{{ '/assets/img/logo-nega.svg' | relative_url }}" alt="Tulkaa kaikki – Kom alla" width="180" height="87">
+      <div>
+        <p><strong>Tulkaa kaikki – Kannelmäki</strong><br>Ehdokaslista Kannelmäen seurakunnan seurakuntavaaleissa</p>
+        <p><a href="mailto:{{ site.data.sivusto.sahkoposti }}">{{ site.data.sivusto.sahkoposti }}</a></p>
+        {%- if site.data.sivusto.some -%}
+        <ul class="some">
+          {%- for s in site.data.sivusto.some %}
+          <li><a href="{{ s.linkki }}">{{ s.nimi }}</a></li>
+          {%- endfor %}
+        </ul>
+        {%- endif %}
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
