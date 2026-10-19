@@ -1,9 +1,10 @@
 ---
-title: Etunimi Sukunimi
-numero: ""
+title: Anni Järvilehto
+numero: "28"
 titteli: ammatti tai titteli
-kuva: ""
-lyhyesti: Yksi tai kaksi lausetta siitä, miksi olen ehdolla. Vaihda tämä teksti hallintapaneelissa.
+kuva: /assets/uploads/Anni ehdokkuus.jpeg
+lyhyesti: Yksi tai kaksi lausetta siitä, miksi olen ehdolla. Vaihda tämä teksti
+  hallintapaneelissa.
 jarjestys: 1
 ---
 Tähän tulee ehdokkaan pidempi esittely. Kerro, kuka olet, mikä seurakunnassa on sinulle tärkeää ja mitä haluat edistää.
