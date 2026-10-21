@@ -21,7 +21,7 @@ Et tarvitse GitHub-tunnusta.
 
 1. Valitse **Ehdokkaat** ja paina **Add an entry** (Lisää).
 2. Täytä nimi ja muut tiedot. Kuvan voi raahata kuvakenttään. Neliön muotoinen kuva, jossa kasvot ovat keskellä, näyttää parhaalta.
-3. Merkitse, onko ehdokas ehdolla **seurakuntaneuvostoon**, **kirkkovaltuustoon** vai molempiin. Ehdokasnumerot lisätään kummallekin erikseen, kun ne on vahvistettu. Siihen asti sivulla lukee "numero tulossa".
+3. Merkitse, onko ehdokas ehdolla **kirkkovaltuustoon**, **seurakuntaneuvostoon** vai molempiin, ja kirjoita ehdokasnumerot omiin kenttiinsä. Jos numeroa ei ole vielä vahvistettu, sivulla lukee "numero tulossa".
 4. **Järjestys** määrää paikan listalla: pienin numero näkyy ensimmäisenä.
 5. Paina **Save**.
 
@@ -29,9 +29,9 @@ Et tarvitse GitHub-tunnusta.
 
 Noin 1–2 minuutin kuluttua tallennuksesta. Päivitä sivu selaimessa.
 
-## Teinkö virheen?
+## Virheen korjaaminen
 
-Ei hätää: jokainen muutos tallentuu historiaan, ja pääylläpitäjä voi palauttaa aiemman version.
+Jokainen muutos tallentuu historiaan, ja pääylläpitäjä voi palauttaa aiemman version.
 
 ## Kuvat ja luvat
 

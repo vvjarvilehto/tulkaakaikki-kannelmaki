@@ -1,20 +1,20 @@
-otsikko: Tulkaa kaikki Kannelmäessä
-ingressi: Rakennamme Kannelmäen seurakuntaa, johon jokainen on tervetullut. Edistämme tasa-arvoa, yhdenvertaisuutta ja avointa päätöksentekoa kirkossa.
+otsikko: Tulkaa kaikki Kannelmäki
+ingressi: Olemme Tulkaa kaikki -liikkeen ehdokaslista Kannelmäen seurakunnassa. Edistämme tasa-arvoa, yhdenvertaisuutta ja avointa päätöksentekoa kirkossa.
 hero_kuva: ""
 
-teemat_otsikko: Mitä me ajamme
+teemat_otsikko: Mitä ajamme
 teemat:
   - otsikko: Jokainen on tervetullut
-    teksti: Seurakunta on paikka, jossa erilaiset ihmiset kohtaavat toisensa kunnioittavasti ja voivat osallistua täysivaltaisesti seurakunnan elämään.
+    teksti: Seurakunnassa erilaiset ihmiset kohtaavat toisensa kunnioittavasti, ja jokainen voi osallistua sen toimintaan täysivaltaisena jäsenenä.
   - otsikko: Tasa-arvoinen avioliitto
     teksti: Kannatamme tasa-arvoisen avioliittolain toteuttamista kirkossa.
   - otsikko: Tasa-arvoinen papisto
     teksti: Haluamme, että kirkossa on tasa-arvoinen papisto sukupuoleen katsomatta.
   - otsikko: Avoin päätöksenteko
-    teksti: Seurakuntaa kehitetään parhaiten yhdessä. Kannustamme jokaista kertomaan näkemyksensä ja vaikuttamaan yhteisiin asioihin.
+    teksti: Haluamme, että seurakunnan asioista päätetään avoimesti. Kannustamme jokaista seurakuntalaista kertomaan näkemyksensä ja vaikuttamaan yhteisiin asioihin.
 
 vaalit_otsikko: Äänestä seurakuntavaaleissa
-vaalit_teksti: Äänestää voi jokainen seurakunnan jäsen, joka on täyttänyt 16 vuotta viimeistään vaalipäivänä. Saat äänestyspaikalla kaksi lippua – valkoisella äänestät kirkkovaltuustoon ja oranssilla seurakuntaneuvostoon. Ota mukaan henkilöllisyystodistus.
+vaalit_teksti: "Äänestää voi jokainen seurakunnan jäsen, joka on täyttänyt 16 vuotta viimeistään vaalipäivänä. Saat äänestyspaikalla kaksi äänestyslippua: valkoisella äänestät kirkkovaltuustoon ja oranssilla seurakuntaneuvostoon. Ota mukaan henkilöllisyystodistus."
 ennakkoaanestys: "Ennakkoäänestys ti–la 3.–7.11.2026"
 vaalipaiva: "Vaalipäivä su 15.11.2026 klo 11–20, Malminkartanon kappeli"
 aanestyspaikat_linkki: https://www.helsinginseurakunnat.fi/kannelmaenseurakunta/uutiset/seurakuntavaalienaanestysajatja-paikatkannelmaenseurakunnassa

@@ -9,11 +9,11 @@ Sivusto on Jekyll-sivusto, jonka GitHub Pages rakentaa automaattisesti. Sisält�
 3. Odota 1–2 minuuttia. Sivu näkyy osoitteessa
    `https://vvjarvilehto.github.io/tulkaakaikki-kannelmaki/`
 
-Rakennuksen tilan näet repositorion **Actions**-välilehdeltä.
+Julkaisun etenemisen näet repositorion **Actions**-välilehdeltä.
 
 ## 2. Hallintapaneeli: Pages CMS (ylläpitäjät ilman GitHub-tunnusta)
 
-Ylläpitäjät kirjautuvat **app.pagescms.org**-palveluun sähköpostilla. Heille ei tarvita GitHub-tunnusta.
+Ylläpitäjät kirjautuvat **app.pagescms.org**-palveluun sähköpostiosoitteellaan. GitHub-tunnusta ei tarvita.
 
 **Käyttöönotto (kerran, sinä):**
 1. Avaa **https://app.pagescms.org** ja kirjaudu GitHub-tunnuksellasi.
@@ -45,7 +45,7 @@ Tunniste on kuin salasana: sitä ei lähetetä kenellekään.
 2. GitHubissa: **Settings → Pages → Custom domain** → kirjoita `www.oma-domain.fi` → Save. Rastita myöhemmin **Enforce HTTPS**.
 3. Domainhotellin DNS-asetuksiin:
    - `www` **CNAME** → `vvjarvilehto.github.io`
-   - paljas domain (`@`) **A**-tietueet: `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
+   - pelkkä domain ilman www-alkua (`@`), **A**-tietueet: `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
    (tarkista ajantasaiset arvot GitHubin ohjeesta *Managing a custom domain for your GitHub Pages site*)
 4. Vaihda tiedostossa `_config.yml` rivi `baseurl: /tulkaakaikki-kannelmaki` muotoon `baseurl: ""`.
 5. Vaihda tiedostossa `admin/config.yml` `site_url` uudeksi osoitteeksi.

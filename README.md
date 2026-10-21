@@ -1,6 +1,6 @@
-# Tulkaa kaikki – Kannelmäki
+# Tulkaa kaikki Kannelmäki
 
-Tulkaa kaikki -ehdokaslistan sivusto Kannelmäen seurakunnan seurakuntavaaleihin.
+Tulkaa kaikki Kannelmäki -ehdokaslistan verkkosivu Kannelmäen seurakunnan seurakuntavaaleihin 2026.
 
 - Sivusto: Jekyll, julkaistaan GitHub Pagesissa
 - Hallintapaneeli: [Pages CMS](https://app.pagescms.org) (ylläpitäjät sähköpostilla, asetukset `.pages.yml`)
@@ -12,7 +12,7 @@ Tulkaa kaikki -ehdokaslistan sivusto Kannelmäen seurakunnan seurakuntavaaleihin
 
 | Kansio / tiedosto | Sisältö |
 |---|---|
-| `_ehdokkaat/` | Yksi tiedosto per ehdokas |
+| `_ehdokkaat/` | Jokaisella ehdokkaalla oma tiedosto |
 | `_data/sivusto.yml` | Etusivun tekstit, teemat, vaalitiedot, Facebook-linkki |
 | `assets/uploads/` | Hallintapaneelista ladatut kuvat |
 | `assets/img/` | Tulkaa kaikki -logot |
