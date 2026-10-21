@@ -87,7 +87,7 @@ h3 { font-size: 1.25rem; }
 .ehdokas__kuva { position: relative; display: block; aspect-ratio: 1; border-radius: var(--pyoristys); overflow: hidden; background: var(--keltainen-vaalea); margin-bottom: 0.45rem; }
 .ehdokas__kuva img { width: 100%; height: 100%; object-fit: cover; }
 .ehdokas__kuva .paikkamerkki, .ehdokassivu__kuva .paikkamerkki { object-fit: contain; padding: 18%; }
-.ehdokas__numerot { position: absolute; left: 0.6rem; bottom: 0.6rem; display: flex; gap: 0.35rem; }
+.ehdokas__numerot { position: absolute; left: 0.6rem; top: 0.6rem; display: flex; gap: 0.35rem; }
 .numero {
   min-width: 3rem; height: 3rem; padding: 0 0.5rem; display: grid; place-items: center; border-radius: 999px;
   border: 2px solid var(--musta); color: var(--musta); font-weight: 700; font-size: 1.35rem;
@@ -139,7 +139,7 @@ h3 { font-size: 1.25rem; }
   .ehdokas { padding-bottom: 1.75rem; }
   .ehdokas__nimi { font-size: 1rem; }
   .ehdokas__titteli { font-size: 0.85rem; }
-  .ehdokas__numerot { left: 0.45rem; bottom: 0.45rem; gap: 0.25rem; }
+  .ehdokas__numerot { left: 0.45rem; top: 0.45rem; gap: 0.25rem; }
   .ehdokas__numerot .numero { min-width: 2.4rem; height: 2.4rem; font-size: 1.1rem; padding: 0 0.35rem; }
   .ylapalkki__sisus { gap: 0.35rem; padding-top: 0.35rem; padding-bottom: 0.4rem; }
   .ylapalkki__logo img { width: 78px; }
