@@ -65,7 +65,7 @@ h3 { font-size: 1.25rem; }
 .hero__kuva .hero__symboli { border-radius: 0; max-width: 22rem; margin: 0 auto; }
 
 /* Osiot */
-.osio { padding: 4rem 0; }
+.osio { padding: 4rem 0; scroll-margin-top: 5rem; }
 .osio--vaalea { background: var(--vaalea); }
 
 
@@ -134,7 +134,12 @@ h3 { font-size: 1.25rem; }
   .ehdokas__nimi { font-size: 1rem; }
   .ehdokas__titteli { font-size: 0.85rem; }
   .ehdokas__numero { min-width: 2.4rem; height: 2.4rem; font-size: 1.1rem; left: 0.45rem; bottom: 0.45rem; }
-  .ylapalkki { position: static; }
-  .ylapalkki__logo img { width: 96px; }
+  .ylapalkki__sisus { gap: 0.35rem; padding-top: 0.35rem; padding-bottom: 0.4rem; }
+  .ylapalkki__logo img { width: 78px; }
+  .ylapalkki__logo span { font-size: 1rem; padding-left: 0.5rem; }
+  .ylapalkki nav { width: 100%; }
+  .ylapalkki nav ul { justify-content: space-between; gap: 0.5rem; font-size: 0.92rem; }
+  .ylapalkki .nappi--pieni { padding: 0.3rem 0.85rem; }
+  .osio { scroll-margin-top: 6.5rem; }
   .osio { padding: 3rem 0; }
 }
