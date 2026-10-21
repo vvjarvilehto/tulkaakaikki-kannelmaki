@@ -1,0 +1,82 @@
+{%- comment -%} Etusivun sisältö. include.nakyma: "erilliset" (oma lista kummallekin vaalille) tai "yhdistetty" (yksi lista, kuvassa molemmat numerot). {%- endcomment -%}
+{%- assign s = site.data.sivusto -%}
+<section class="hero">
+  <div class="kehys hero__sisus">
+    <div class="hero__teksti">
+      <p class="yla">Seurakuntavaalit 2026 · Kannelmäen seurakunta</p>
+      <h1>{{ s.otsikko }}</h1>
+      <p class="ingressi">{{ s.ingressi }}</p>
+      <p class="napit">
+        <a class="nappi" href="#ehdokkaat">Tutustu ehdokkaisiin</a>
+        <a class="nappi nappi--toissijainen" href="#aanesta">Näin äänestät</a>
+      </p>
+    </div>
+    <div class="hero__kuva">
+      {%- if s.hero_kuva and s.hero_kuva != "" %}
+      <img src="{% include kuva.html src=s.hero_kuva %}" alt="">
+      {%- else %}
+      <img class="hero__symboli" src="{{ '/assets/img/kynttila.svg' | relative_url }}" alt="">
+      {%- endif %}
+    </div>
+  </div>
+</section>
+
+
+<div id="ehdokkaat">
+{%- assign ehdokkaat = site.ehdokkaat | sort: "jarjestys" %}
+{%- if include.nakyma == "yhdistetty" %}
+<section class="osio osio--vaalea">
+  <div class="kehys">
+    <h2>Ehdokkaamme</h2>
+    <ul class="selite">
+      <li><span class="numero numero--kv numero--selite" aria-hidden="true"></span>Kirkkovaltuusto, valkoinen äänestyslippu</li>
+      <li><span class="numero numero--sn numero--selite" aria-hidden="true"></span>Seurakuntaneuvosto, oranssi äänestyslippu</li>
+    </ul>
+    <div class="ehdokkaat">
+      {%- for e in ehdokkaat %}
+      {% include ehdokaskortti.html ehdokas=e elin="molemmat" %}
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+{%- else %}
+<section id="kirkkovaltuusto" class="osio osio--vaalea">
+  <div class="kehys">
+    <h2>Ehdolla kirkkovaltuustoon</h2>
+    {%- if s.kirkkovaltuusto_teksti %}<p class="osio__johdanto">{{ s.kirkkovaltuusto_teksti }}</p>{% endif %}
+    <div class="ehdokkaat">
+      {%- for e in ehdokkaat %}{% if e.kirkkovaltuusto.ehdolla %}
+      {% include ehdokaskortti.html ehdokas=e elin="kirkkovaltuusto" %}
+      {%- endif %}{% endfor %}
+    </div>
+  </div>
+</section>
+
+<section id="seurakuntaneuvosto" class="osio">
+  <div class="kehys">
+    <h2>Ehdolla seurakuntaneuvostoon</h2>
+    {%- if s.seurakuntaneuvosto_teksti %}<p class="osio__johdanto">{{ s.seurakuntaneuvosto_teksti }}</p>{% endif %}
+    <div class="ehdokkaat">
+      {%- for e in ehdokkaat %}{% if e.seurakuntaneuvosto.ehdolla %}
+      {% include ehdokaskortti.html ehdokas=e elin="seurakuntaneuvosto" %}
+      {%- endif %}{% endfor %}
+    </div>
+  </div>
+</section>
+{%- endif %}
+</div>
+
+<section id="aanesta" class="osio osio--aanesta">
+  <div class="kehys aanesta">
+    <div>
+      <h2>{{ s.vaalit_otsikko }}</h2>
+      <p>{{ s.vaalit_teksti }}</p>
+      <ul class="paivat">
+        <li>{{ s.ennakkoaanestys }}</li>
+        <li>{{ s.vaalipaiva }}</li>
+      </ul>
+      <p><a class="nappi" href="{{ s.aanestyspaikat_linkki }}">Kaikki äänestyspaikat ja -ajat</a></p>
+    </div>
+  </div>
+</section>
+

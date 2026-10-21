@@ -1,6 +1,9 @@
 /* Tulkaa kaikki – Kannelmäki. Värit poimittu Tulkaa kaikki -logosta. */
 :root {
   --magenta: #ec038d;
+  /* Äänestyslippujen värit: kirkkovaltuusto valkoinen, seurakuntaneuvosto oranssi. */
+  --lippu-kv: #ffffff;
+  --lippu-sn: #f7941d;
   --magenta-tumma: #b8006d;
   --keltainen: #f9ad0c;
   --keltainen-vaalea: #fff4d6;
@@ -84,11 +87,17 @@ h3 { font-size: 1.25rem; }
 .ehdokas__kuva { position: relative; display: block; aspect-ratio: 1; border-radius: var(--pyoristys); overflow: hidden; background: var(--keltainen-vaalea); margin-bottom: 0.45rem; }
 .ehdokas__kuva img { width: 100%; height: 100%; object-fit: cover; }
 .ehdokas__kuva .paikkamerkki, .ehdokassivu__kuva .paikkamerkki { object-fit: contain; padding: 18%; }
-.ehdokas__numero {
-  position: absolute; left: 0.6rem; bottom: 0.6rem; min-width: 3rem; height: 3rem; padding: 0 0.5rem;
-  display: grid; place-items: center; border-radius: 999px; background: var(--magenta); color: var(--valkoinen);
-  font-weight: 700; font-size: 1.35rem; border: 3px solid var(--keltainen);
+.ehdokas__numerot { position: absolute; left: 0.6rem; bottom: 0.6rem; display: flex; gap: 0.35rem; }
+.numero {
+  min-width: 3rem; height: 3rem; padding: 0 0.5rem; display: grid; place-items: center; border-radius: 999px;
+  border: 2px solid var(--musta); color: var(--musta); font-weight: 700; font-size: 1.35rem;
+  box-shadow: 0 1px 4px rgb(0 0 0 / 0.25);
 }
+.numero--kv { background: var(--lippu-kv); color: var(--musta); }
+.numero--sn { background: var(--lippu-sn); color: var(--musta); }
+.numero--selite { min-width: 1.4rem; width: 1.4rem; height: 1.4rem; padding: 0; box-shadow: none; }
+.selite { list-style: none; padding: 0; margin: 0.5rem 0 0; display: flex; flex-wrap: wrap; gap: 0.5rem 1.5rem; color: var(--harmaa); }
+.selite li { display: flex; align-items: center; gap: 0.5rem; }
 .ehdokas__nimi { font-size: 1.15rem; }
 .ehdokas__nimi a { color: var(--musta); text-decoration: none; }
 .ehdokas__nimi a:hover { color: var(--magenta); }
@@ -96,7 +105,7 @@ h3 { font-size: 1.25rem; }
 .ehdokas__lyhyesti:empty { display: none; }
 .ehdokkuudet { list-style: none; padding: 0; margin: 0 0 0.75rem; display: grid; gap: 0.35rem; }
 .ehdokkuudet li { display: flex; align-items: center; justify-content: space-between; gap: 0.75rem; padding: 0.3rem 0.3rem 0.3rem 0.75rem; border-radius: 999px; background: var(--keltainen-vaalea); font-size: 0.9rem; font-weight: 500; }
-.ehdokkuudet__numero { min-width: 2.4rem; padding: 0.1rem 0.6rem; border-radius: 999px; background: var(--magenta); color: var(--valkoinen); font-weight: 700; font-size: 1.05rem; text-align: center; }
+.ehdokkuudet__numero { min-width: 2.4rem; padding: 0.05rem 0.6rem; border-radius: 999px; border: 2px solid var(--musta); color: var(--musta); font-weight: 700; font-size: 1.05rem; text-align: center; }
 .ehdokkuudet__tulossa { color: var(--harmaa); font-size: 0.8rem; font-weight: 400; padding-right: 0.5rem; white-space: nowrap; }
 
 .ehdokassivu { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); gap: 3rem; align-items: start; }
@@ -133,7 +142,8 @@ h3 { font-size: 1.25rem; }
   .ehdokas { padding-bottom: 1.75rem; }
   .ehdokas__nimi { font-size: 1rem; }
   .ehdokas__titteli { font-size: 0.85rem; }
-  .ehdokas__numero { min-width: 2.4rem; height: 2.4rem; font-size: 1.1rem; left: 0.45rem; bottom: 0.45rem; }
+  .ehdokas__numerot { left: 0.45rem; bottom: 0.45rem; gap: 0.25rem; }
+  .ehdokas__numerot .numero { min-width: 2.4rem; height: 2.4rem; font-size: 1.1rem; padding: 0 0.35rem; }
   .ylapalkki__sisus { gap: 0.35rem; padding-top: 0.35rem; padding-bottom: 0.4rem; }
   .ylapalkki__logo img { width: 78px; }
   .ylapalkki__logo span { font-size: 1rem; padding-left: 0.5rem; }

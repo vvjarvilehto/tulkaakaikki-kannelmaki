@@ -1,6 +1,8 @@
-{%- comment -%} Ehdokaskortti yhden vaalin osiossa. include.elin on "kirkkovaltuusto" tai "seurakuntaneuvosto". {%- endcomment -%}
+{%- comment -%} Ehdokaskortti. include.elin on "kirkkovaltuusto", "seurakuntaneuvosto" tai "molemmat"; kuvan päällä näytetään vastaavat äänestysnumerot lippujen väreissä. {%- endcomment -%}
 {%- assign e = include.ehdokas -%}
-{%- assign ehdokkuus = e[include.elin] -%}
+{%- assign nayta_kv = false -%}{%- assign nayta_sn = false -%}
+{%- if include.elin == "kirkkovaltuusto" or include.elin == "molemmat" %}{% if e.kirkkovaltuusto.ehdolla and e.kirkkovaltuusto.numero and e.kirkkovaltuusto.numero != "" %}{% assign nayta_kv = true %}{% endif %}{% endif -%}
+{%- if include.elin == "seurakuntaneuvosto" or include.elin == "molemmat" %}{% if e.seurakuntaneuvosto.ehdolla and e.seurakuntaneuvosto.numero and e.seurakuntaneuvosto.numero != "" %}{% assign nayta_sn = true %}{% endif %}{% endif -%}
 <article class="ehdokas">
   <a class="ehdokas__kuva" href="{{ e.url | relative_url }}" tabindex="-1" aria-hidden="true">
     {%- if e.kuva and e.kuva != "" %}
@@ -8,11 +10,17 @@
     {%- else %}
     <img class="paikkamerkki" src="{{ '/assets/img/kynttila.svg' | relative_url }}" alt="">
     {%- endif %}
-    {%- if ehdokkuus.numero and ehdokkuus.numero != "" %}
-    <span class="ehdokas__numero">{{ ehdokkuus.numero }}</span>
+    {%- if nayta_kv or nayta_sn %}
+    <span class="ehdokas__numerot">
+      {%- if nayta_kv %}<span class="numero numero--kv">{{ e.kirkkovaltuusto.numero }}</span>{% endif -%}
+      {%- if nayta_sn %}<span class="numero numero--sn">{{ e.seurakuntaneuvosto.numero }}</span>{% endif -%}
+    </span>
     {%- endif %}
   </a>
-  <h3 class="ehdokas__nimi"><a href="{{ e.url | relative_url }}">{% if ehdokkuus.numero and ehdokkuus.numero != "" %}<span class="piilotettu">{{ ehdokkuus.numero }} </span>{% endif %}{{ e.title }}</a></h3>
+  <h3 class="ehdokas__nimi"><a href="{{ e.url | relative_url }}">{{ e.title }}
+    {%- if nayta_kv %}<span class="piilotettu">, kirkkovaltuusto {{ e.kirkkovaltuusto.numero }}</span>{% endif -%}
+    {%- if nayta_sn %}<span class="piilotettu">, seurakuntaneuvosto {{ e.seurakuntaneuvosto.numero }}</span>{% endif -%}
+  </a></h3>
   <p class="ehdokas__titteli">{{ e.titteli }}</p>
   <p class="ehdokas__lyhyesti">{{ e.lyhyesti }}</p>
 </article>
