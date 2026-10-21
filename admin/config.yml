@@ -53,20 +53,14 @@ collections:
     label: Sivuston tekstit
     files:
       - name: sivusto
-        label: Etusivu, teemat ja vaalitiedot
+        label: Etusivu ja vaalitiedot
         file: _data/sivusto.yml
         fields:
           - { name: otsikko, label: Etusivun pääotsikko, widget: string }
           - { name: ingressi, label: Etusivun johdanto, widget: text }
           - { name: hero_kuva, label: Etusivun kuva, widget: image, required: false, hint: "Jos tyhjä, näytetään Tulkaa kaikki -kynttilä." }
-          - { name: teemat_otsikko, label: Teemojen otsikko, widget: string }
-          - name: teemat
-            label: Teemat
-            label_singular: Teema
-            widget: list
-            fields:
-              - { name: otsikko, label: Otsikko, widget: string }
-              - { name: teksti, label: Teksti, widget: text }
+          - { name: kirkkovaltuusto_teksti, label: Kirkkovaltuusto-osion johdanto, widget: text }
+          - { name: seurakuntaneuvosto_teksti, label: Seurakuntaneuvosto-osion johdanto, widget: text }
           - { name: vaalit_otsikko, label: Äänestysosion otsikko, widget: string }
           - { name: vaalit_teksti, label: Äänestysosion teksti, widget: text }
           - { name: ennakkoaanestys, label: Ennakkoäänestys, widget: string }

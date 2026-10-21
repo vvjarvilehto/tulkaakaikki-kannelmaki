@@ -13,7 +13,7 @@ Tulkaa kaikki Kannelmäki -ehdokaslistan verkkosivu Kannelmäen seurakunnan seur
 | Kansio / tiedosto | Sisältö |
 |---|---|
 | `_ehdokkaat/` | Jokaisella ehdokkaalla oma tiedosto |
-| `_data/sivusto.yml` | Etusivun tekstit, teemat, vaalitiedot, Facebook-linkki |
+| `_data/sivusto.yml` | Etusivun tekstit, vaalitiedot, Facebook-linkki |
 | `assets/uploads/` | Hallintapaneelista ladatut kuvat |
 | `assets/img/` | Tulkaa kaikki -logot |
 

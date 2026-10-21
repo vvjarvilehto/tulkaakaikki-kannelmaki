@@ -1,16 +1,18 @@
+{%- comment -%} Ehdokaskortti yhden vaalin osiossa. include.elin on "kirkkovaltuusto" tai "seurakuntaneuvosto". {%- endcomment -%}
 {%- assign e = include.ehdokas -%}
+{%- assign ehdokkuus = e[include.elin] -%}
 <article class="ehdokas">
-  <a class="ehdokas__linkki" href="{{ e.url | relative_url }}">
-    <div class="ehdokas__kuva">
-      {%- if e.kuva and e.kuva != "" %}
-      <img src="{% include kuva.html src=e.kuva %}" alt="{{ e.title }}" loading="lazy">
-      {%- else %}
-      <img class="paikkamerkki" src="{{ '/assets/img/kynttila.svg' | relative_url }}" alt="">
-      {%- endif %}
-    </div>
-    <h3>{{ e.title }}</h3>
+  <a class="ehdokas__kuva" href="{{ e.url | relative_url }}" tabindex="-1" aria-hidden="true">
+    {%- if e.kuva and e.kuva != "" %}
+    <img src="{% include kuva.html src=e.kuva %}" alt="" loading="lazy">
+    {%- else %}
+    <img class="paikkamerkki" src="{{ '/assets/img/kynttila.svg' | relative_url }}" alt="">
+    {%- endif %}
+    {%- if ehdokkuus.numero and ehdokkuus.numero != "" %}
+    <span class="ehdokas__numero">{{ ehdokkuus.numero }}</span>
+    {%- endif %}
   </a>
-  {%- if e.titteli %}<p class="ehdokas__titteli">{{ e.titteli }}</p>{% endif %}
-  {%- include ehdokasnumerot.html ehdokas=e %}
-  {%- if e.lyhyesti %}<p>{{ e.lyhyesti }}</p>{% endif %}
+  <h3 class="ehdokas__nimi"><a href="{{ e.url | relative_url }}">{% if ehdokkuus.numero and ehdokkuus.numero != "" %}<span class="piilotettu">{{ ehdokkuus.numero }} </span>{% endif %}{{ e.title }}</a></h3>
+  <p class="ehdokas__titteli">{{ e.titteli }}</p>
+  <p class="ehdokas__lyhyesti">{{ e.lyhyesti }}</p>
 </article>

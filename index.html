@@ -23,32 +23,33 @@ layout: default
   </div>
 </section>
 
-<section id="teemat" class="osio">
-  <div class="kehys">
-    <h2>{{ s.teemat_otsikko }}</h2>
-    <ul class="teemat">
-      {%- for t in s.teemat %}
-      <li>
-        <h3>{{ t.otsikko }}</h3>
-        <p>{{ t.teksti }}</p>
-      </li>
-      {%- endfor %}
-    </ul>
-  </div>
-</section>
 
-<section id="ehdokkaat" class="osio osio--vaalea">
+<div id="ehdokkaat">
+{%- assign ehdokkaat = site.ehdokkaat | sort: "jarjestys" %}
+<section id="kirkkovaltuusto" class="osio osio--vaalea">
   <div class="kehys">
-    <h2>Ehdokkaamme</h2>
+    <h2>Ehdolla kirkkovaltuustoon</h2>
+    {%- if s.kirkkovaltuusto_teksti %}<p class="osio__johdanto">{{ s.kirkkovaltuusto_teksti }}</p>{% endif %}
     <div class="ehdokkaat">
-      {%- assign ehdokkaat = site.ehdokkaat | sort: "jarjestys" -%}
-      {%- for e in ehdokkaat %}
-      {% include ehdokaskortti.html ehdokas=e %}
-      {%- endfor %}
+      {%- for e in ehdokkaat %}{% if e.kirkkovaltuusto.ehdolla %}
+      {% include ehdokaskortti.html ehdokas=e elin="kirkkovaltuusto" %}
+      {%- endif %}{% endfor %}
     </div>
   </div>
 </section>
 
+<section id="seurakuntaneuvosto" class="osio">
+  <div class="kehys">
+    <h2>Ehdolla seurakuntaneuvostoon</h2>
+    {%- if s.seurakuntaneuvosto_teksti %}<p class="osio__johdanto">{{ s.seurakuntaneuvosto_teksti }}</p>{% endif %}
+    <div class="ehdokkaat">
+      {%- for e in ehdokkaat %}{% if e.seurakuntaneuvosto.ehdolla %}
+      {% include ehdokaskortti.html ehdokas=e elin="seurakuntaneuvosto" %}
+      {%- endif %}{% endfor %}
+    </div>
+  </div>
+</section>
+</div>
 
 <section id="aanesta" class="osio osio--aanesta">
   <div class="kehys aanesta">

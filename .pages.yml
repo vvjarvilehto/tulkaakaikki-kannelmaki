@@ -47,14 +47,8 @@ content:
       - { name: otsikko, label: Etusivun pääotsikko, type: string }
       - { name: ingressi, label: Etusivun johdanto, type: text }
       - { name: hero_kuva, label: Etusivun kuva, type: image, description: "Jos tyhjä, näytetään Tulkaa kaikki -kynttilä." }
-      - { name: teemat_otsikko, label: Teemojen otsikko, type: string }
-      - name: teemat
-        label: Teemat
-        type: object
-        list: true
-        fields:
-          - { name: otsikko, label: Otsikko, type: string }
-          - { name: teksti, label: Teksti, type: text }
+      - { name: kirkkovaltuusto_teksti, label: Kirkkovaltuusto-osion johdanto, type: text }
+      - { name: seurakuntaneuvosto_teksti, label: Seurakuntaneuvosto-osion johdanto, type: text }
       - { name: vaalit_otsikko, label: Äänestysosion otsikko, type: string }
       - { name: vaalit_teksti, label: Äänestysosion teksti, type: text }
       - { name: ennakkoaanestys, label: Ennakkoäänestys, type: string }

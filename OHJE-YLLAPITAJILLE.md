@@ -15,14 +15,14 @@ Et tarvitse GitHub-tunnusta.
 | Kohta | Mitä siellä on |
 |---|---|
 | **Ehdokkaat** | Ehdokkaiden nimet, ehdokkuudet ja numerot, kuvat ja esittelyt |
-| **Sivuston tekstit** | Etusivun otsikko ja kuva, teemat, äänestystiedot, Facebook-linkki |
+| **Sivuston tekstit** | Etusivun otsikko ja kuva, ehdokasosioiden johdannot, äänestystiedot, Facebook-linkki |
 
 ## Ehdokkaan lisääminen
 
 1. Valitse **Ehdokkaat** ja paina **Add an entry** (Lisää).
 2. Täytä nimi ja muut tiedot. Kuvan voi raahata kuvakenttään. Neliön muotoinen kuva, jossa kasvot ovat keskellä, näyttää parhaalta.
 3. Merkitse, onko ehdokas ehdolla **kirkkovaltuustoon**, **seurakuntaneuvostoon** vai molempiin, ja kirjoita ehdokasnumerot omiin kenttiinsä. Jos numeroa ei ole vielä vahvistettu, sivulla lukee "numero tulossa".
-4. **Järjestys** määrää paikan listalla: pienin numero näkyy ensimmäisenä.
+4. **Järjestys** määrää paikan listalla: pienin numero näkyy ensimmäisenä. Ehdokas näkyy etusivulla niissä osioissa (kirkkovaltuusto, seurakuntaneuvosto), joihin hänet on merkitty ehdolle.
 5. Paina **Save**.
 
 ## Milloin muutos näkyy?
