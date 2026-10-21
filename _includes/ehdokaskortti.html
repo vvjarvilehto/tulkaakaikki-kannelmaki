@@ -1,8 +1,8 @@
-{%- comment -%} Ehdokaskortti. include.elin on "kirkkovaltuusto", "seurakuntaneuvosto" tai "molemmat"; kuvan päällä näytetään vastaavat äänestysnumerot lippujen väreissä. {%- endcomment -%}
+{%- comment -%} Ehdokaskortti. include.elin on "kirkkovaltuusto" tai "seurakuntaneuvosto"; kuvan päällä näytetään sen vaalin äänestysnumero lipun värissä. {%- endcomment -%}
 {%- assign e = include.ehdokas -%}
 {%- assign nayta_kv = false -%}{%- assign nayta_sn = false -%}
-{%- if include.elin == "kirkkovaltuusto" or include.elin == "molemmat" %}{% if e.kirkkovaltuusto.ehdolla and e.kirkkovaltuusto.numero and e.kirkkovaltuusto.numero != "" %}{% assign nayta_kv = true %}{% endif %}{% endif -%}
-{%- if include.elin == "seurakuntaneuvosto" or include.elin == "molemmat" %}{% if e.seurakuntaneuvosto.ehdolla and e.seurakuntaneuvosto.numero and e.seurakuntaneuvosto.numero != "" %}{% assign nayta_sn = true %}{% endif %}{% endif -%}
+{%- if include.elin == "kirkkovaltuusto" %}{% if e.kirkkovaltuusto.ehdolla and e.kirkkovaltuusto.numero and e.kirkkovaltuusto.numero != "" %}{% assign nayta_kv = true %}{% endif %}{% endif -%}
+{%- if include.elin == "seurakuntaneuvosto" %}{% if e.seurakuntaneuvosto.ehdolla and e.seurakuntaneuvosto.numero and e.seurakuntaneuvosto.numero != "" %}{% assign nayta_sn = true %}{% endif %}{% endif -%}
 <article class="ehdokas">
   <a class="ehdokas__kuva" href="{{ e.url | relative_url }}" tabindex="-1" aria-hidden="true">
     {%- if e.kuva and e.kuva != "" %}
