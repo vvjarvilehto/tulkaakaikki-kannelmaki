@@ -5,6 +5,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.title }}</title>
   <meta name="description" content="{{ page.lyhyesti | default: site.description }}">
+  {%- comment -%} Jakokuva ja -tekstit WhatsAppia, Facebookia ja viestisovelluksia varten. Ehdokkaan sivulla käytetään ehdokkaan kuvaa. {%- endcomment -%}
+  {%- assign jako_kuva = '/assets/img/jakokuva.jpg' | absolute_url -%}
+  {%- assign jako_leveys = '1200' -%}{%- assign jako_korkeus = '630' -%}
+  {%- if page.kuva and page.kuva != "" -%}
+    {%- assign jako_leveys = nil -%}
+    {%- if page.kuva contains '://' -%}{%- assign jako_kuva = page.kuva -%}{%- else -%}{%- assign jako_kuva = page.kuva | absolute_url -%}{%- endif -%}
+  {%- endif -%}
+  {%- assign jako_kuvaus = page.lyhyesti | default: site.description -%}
+  {%- if page.collection == 'ehdokkaat' and page.lyhyesti == "" -%}
+    {%- capture jako_kuvaus -%}{% if page.kirkkovaltuusto.ehdolla and page.kirkkovaltuusto.numero != "" %}Kirkkovaltuusto {{ page.kirkkovaltuusto.numero }}. {% endif %}{% if page.seurakuntaneuvosto.ehdolla and page.seurakuntaneuvosto.numero != "" %}Seurakuntaneuvosto {{ page.seurakuntaneuvosto.numero }}. {% endif %}{{ page.titteli }}{%- endcapture -%}
+  {%- endif %}
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="{{ site.title }}">
+  <meta property="og:locale" content="fi_FI">
+  <meta property="og:title" content="{% if page.title %}{{ page.title }} – {% endif %}{{ site.title }}">
+  <meta property="og:description" content="{{ jako_kuvaus | strip | escape }}">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <meta property="og:image" content="{{ jako_kuva }}">
+  {%- if jako_leveys %}
+  <meta property="og:image:width" content="{{ jako_leveys }}">
+  <meta property="og:image:height" content="{{ jako_korkeus }}">
+  {%- endif %}
+  <meta property="og:image:alt" content="{% if page.title %}{{ page.title }}{% else %}Tulkaa kaikki Kannelmäki – seurakuntavaalit 2026{% endif %}">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
   <link rel="icon" href="{{ '/assets/img/logo.svg' | relative_url }}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
