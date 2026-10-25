@@ -7,7 +7,7 @@ Sivusto on Jekyll-sivusto, jonka GitHub Pages rakentaa automaattisesti. Sisält�
 1. Avaa repositorio GitHubissa → **Settings → Pages**.
 2. Kohdassa *Build and deployment* valitse **Source: Deploy from a branch**, **Branch: main**, kansio **/ (root)** ja paina **Save**.
 3. Odota 1–2 minuuttia. Sivu näkyy osoitteessa
-   `https://vvjarvilehto.github.io/tulkaakaikki-kannelmaki/`
+   `https://tulkaakaikkikannelmaki.fi/`
 
 Julkaisun etenemisen näet repositorion **Actions**-välilehdeltä.
 
@@ -31,7 +31,7 @@ Kaikki muutokset tallentuvat GitHubiin kuten ennenkin, joten historia ja palautu
 
 ## 3. Vaihtoehtoinen hallintapaneeli GitHub-käyttäjille (Sveltia CMS)
 
-Jos ylläpitäjällä on GitHub-tunnus, hän voi käyttää myös osoitetta `…/tulkaakaikki-kannelmaki/admin/`.
+Jos ylläpitäjällä on GitHub-tunnus, hän voi käyttää myös osoitetta `https://tulkaakaikkikannelmaki.fi/admin/`.
 
 1. Lisää hänet repositorioon: **Settings → Collaborators → Add people**.
 2. Hän tekee tunnisteen: **Settings → Developer settings → Personal access tokens → Tokens (classic) → Generate new token (classic)**, rasti vain kohtaan **public_repo**.
@@ -39,16 +39,15 @@ Jos ylläpitäjällä on GitHub-tunnus, hän voi käyttää myös osoitetta `…
 
 Tunniste on kuin salasana: sitä ei lähetetä kenellekään.
 
-## 4. Oma domain (kun testi on onnistunut)
+## 4. Oma domain
 
-1. Osta domain Domainhotellista.
-2. GitHubissa: **Settings → Pages → Custom domain** → kirjoita `www.oma-domain.fi` → Save. Rastita myöhemmin **Enforce HTTPS**.
-3. Domainhotellin DNS-asetuksiin:
-   - `www` **CNAME** → `vvjarvilehto.github.io`
-   - pelkkä domain ilman www-alkua (`@`), **A**-tietueet: `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
-   (tarkista ajantasaiset arvot GitHubin ohjeesta *Managing a custom domain for your GitHub Pages site*)
-4. Vaihda tiedostossa `_config.yml` rivi `baseurl: /tulkaakaikki-kannelmaki` muotoon `baseurl: ""`.
-5. Vaihda tiedostossa `admin/config.yml` `site_url` uudeksi osoitteeksi.
+Sivusto on osoitteessa **tulkaakaikkikannelmaki.fi**. Domainin nimi on tiedostossa `CNAME`, ja `_config.yml`:ssä `baseurl` on tyhjä.
+
+Domainhotellin DNS-asetukset:
+- pelkkä domain (`@`), **A**-tietueet: `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
+- `www` **CNAME** → `vvjarvilehto.github.io`
+
+GitHubissa **Settings → Pages → Custom domain** on `tulkaakaikkikannelmaki.fi`, ja **Enforce HTTPS** on rastitettu. Osoite `www.tulkaakaikkikannelmaki.fi` ja vanha `vvjarvilehto.github.io/tulkaakaikki-kannelmaki/` ohjautuvat automaattisesti uuteen osoitteeseen.
 
 ## 5. Sveltian helpompi kirjautuminen (valinnainen)
 

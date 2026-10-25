@@ -2,10 +2,9 @@ title: Tulkaa kaikki Kannelmäki
 description: Tulkaa kaikki Kannelmäki on ehdokaslista Kannelmäen seurakunnan seurakuntavaaleissa 2026.
 lang: fi
 
-# GitHub Pages -testiosoitteessa sivusto on alikansiossa /tulkaakaikki-kannelmaki.
-# Kun oma domain otetaan käyttöön, vaihda baseurl tyhjäksi: baseurl: ""
-baseurl: /tulkaakaikki-kannelmaki
-url: ""
+# Sivusto on omassa domainissa (tiedosto CNAME), joten baseurl on tyhjä.
+baseurl: ""
+url: https://tulkaakaikkikannelmaki.fi
 
 markdown: kramdown
 

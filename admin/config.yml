@@ -14,7 +14,7 @@ backend:
     deleteMedia: "Poistettu kuva {{path}} ({{author-login}})"
 
 app_title: Tulkaa kaikki Kannelmäki
-site_url: https://vvjarvilehto.github.io/tulkaakaikki-kannelmaki/
+site_url: https://tulkaakaikkikannelmaki.fi/
 media_folder: assets/uploads
 public_folder: /assets/uploads
 
